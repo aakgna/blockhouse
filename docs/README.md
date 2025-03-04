@@ -1,14 +1,41 @@
-# SetUp instructions
-## web-app
-1. cd into the web app directory by doing this "cd web-app"
-2. perform "npm i" in that directory
-3. In the command line input "npm run dev" to run the project.
-4. Hit "cntrl + c" to exit.
-5. cd out of the repo by doing this "cd .."
+# Website
 
-## docs
-1. cd into the docs directory by doing this "cd docs"
-2. perform "npm i" in that directory
-3. In the command line input "npm run start" to run the project.
-4. Hit "cntrl + c" to exit.
-5. cd out of the repo by doing this "cd .."
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+
+### Installation
+
+```
+$ yarn
+```
+
+### Local Development
+
+```
+$ yarn start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
